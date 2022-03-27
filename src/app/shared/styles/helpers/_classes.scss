@@ -1,0 +1,15 @@
+.full-screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.ellipsis {
+  // Element need a fixed width to work
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

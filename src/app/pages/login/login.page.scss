@@ -1,0 +1,15 @@
+.login {
+  --background: url("/assets/img/background.jpg") no-repeat center center/cover;
+  --ion-grid-padding: 1rem;
+
+  &__grid {
+    max-width: 25rem;
+  }
+
+  &__logo {
+    margin: 1rem auto;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid var(--ion-color-primary);
+  }
+}

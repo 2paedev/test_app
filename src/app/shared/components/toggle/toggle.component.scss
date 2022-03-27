@@ -1,0 +1,14 @@
+.toggle {
+  --border-style: none;
+  --padding-end: 0.5rem;
+
+  ion-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  ion-toggle {
+    --background: var(--ion-color-light-shade);
+    --handle-background: var(--ion-color-medium-shade);
+  }
+}

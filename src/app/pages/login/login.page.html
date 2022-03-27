@@ -1,0 +1,21 @@
+<ion-content class="login" scrollY="false">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-grid class="login__grid">
+      <ion-row>
+        <ion-col>
+          <ion-avatar class="login__logo">
+            <img src="assets/img/logo.jpg">
+          </ion-avatar>
+
+          <app-input [form]="loginForm" controlName="email" type="email" placeholder="Email" icon="person-outline" [submitted]="isSubmitted" color="medium"></app-input>
+
+          <app-input [form]="loginForm" controlName="password" type="password" placeholder="Contraseña" icon="lock-closed-outline" [submitted]="isSubmitted" color="medium"></app-input>
+
+          <app-toggle [form]="loginForm" controlName="reminder" labelText="Recordar"></app-toggle>
+
+          <ion-button class="btn" type="submit" color="primary" expand="block">Acceder</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
