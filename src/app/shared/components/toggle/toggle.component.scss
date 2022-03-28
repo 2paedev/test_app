@@ -2,12 +2,12 @@
   --border-style: none;
   --padding-end: 0.5rem;
 
-  ion-label {
+  &__label {
     font-size: 0.9rem;
     font-weight: 600;
   }
 
-  ion-toggle {
+  &__element {
     --background: var(--ion-color-light-shade);
     --handle-background: var(--ion-color-medium-shade);
   }
