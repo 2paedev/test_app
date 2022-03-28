@@ -30,7 +30,7 @@ describe('Mobile App Testing', () => {
     cy.get('ion-input').eq(0).type('test@mail.com');
     cy.get('ion-input').eq(1).type('1234');
     cy.get('ion-button').click();
-    cy.get('.input__error').should('contain.text', 'Máx. 5 caracteres');
+    cy.get('.input__error').should('contain.text', 'Min. 5 caracteres');
   });
 
   it('should not show errors if form is valid', () => {

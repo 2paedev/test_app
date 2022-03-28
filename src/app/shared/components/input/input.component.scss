@@ -1,13 +1,13 @@
 .input {
   --padding-end: 1rem;
 
-  ion-input {
+  &__element {
     font-size: 0.9rem;
+  }
 
-    ion-icon {
-      margin-right: 0.75rem;
-      font-size: 1.1rem;
-    }
+  &__icon {
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
   }
 
   &__error {

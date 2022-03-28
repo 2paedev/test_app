@@ -1,15 +1,15 @@
 <ion-item class="input" [formGroup]="form">
-  <ion-input [formControlName]="controlName" [type]="type" [placeholder]="placeholder" [color]="color">
-    <ion-icon *ngIf="icon" [name]="icon" slot="start"></ion-icon>
+  <ion-input class="input__element" [formControlName]="controlName" [type]="type" [placeholder]="placeholder" [color]="color">
+    <ion-icon class="input__icon" *ngIf="icon" [name]="icon" slot="start"></ion-icon>
   </ion-input>
-  <span class="input__error" *ngIf="submitted && fc[controlName].errors?.required">
+  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.required)">
     Campo obligatorio
   </span>
-  <span class="input__error" *ngIf="submitted && fc[controlName].errors?.email">
+  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.email)">
     Formato email incorrecto
   </span>
-  <span class="input__error" *ngIf="submitted && fc[controlName].errors?.minlength">
-    Máx. {{ fc[controlName].errors?.minlength.requiredLength }} caracteres
+  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.minLength)">
+    Min. {{ fc[controlName].errors?.minlength.requiredLength }} caracteres
   </span>
 </ion-item>
 
