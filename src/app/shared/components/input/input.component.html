@@ -2,13 +2,13 @@
   <ion-input class="input__element" [formControlName]="controlName" [type]="type" [placeholder]="placeholder" [color]="color">
     <ion-icon class="input__icon" *ngIf="icon" [name]="icon" slot="start"></ion-icon>
   </ion-input>
-  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.required)">
+  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.required, submitted)">
     Campo obligatorio
   </span>
-  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.email)">
+  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.email, submitted)">
     Formato email incorrecto
   </span>
-  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.minLength)">
+  <span class="input__error" *ngIf="hasError(fc[controlName], errorTypes.minLength, submitted)">
     Min. {{ fc[controlName].errors?.minlength.requiredLength }} caracteres
   </span>
 </ion-item>
